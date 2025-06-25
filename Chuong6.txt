@@ -15,3 +15,28 @@ Mục đích của thừa kế là "tái sử dụng" code.
 (không cần lặp lại code, tăng tính reuse, đồng thời phản ánh "thực tế vào code") 
 - Lớp con (childClass) có thể sử dụng thuộc tính và phương thức của lớp cha  (superClass) 
 => lưu ý về access modifier (chỉ kế thừa public/protected, không kế thừa private) - Lớp con "không kế thừa" hàm tạo của lớp cha
+
+***** Interface *****
+- Interface là một cách khác để thực hiện tính "kế thừa/Inherit" trong java (bên cạnh  abstract class) 
+- Là một tập hợp của các methods (không có body) 
+- Interface không có body => body được ghi đè lại tại các class "implements" - Khi kế thừa interface, cần phải ghi đè tất cả method của interface (ngoại trừ default  method) 
+- Mặc định, tất cả method của interface là "abstract" + "public" 
+- Interface không thể có constructor  
+=> không thể khởi tạo object từ Interface - 1 class có thể kế thừa cùng lúc nhiều interface (abstract class là kế thừa 1:1) 
+
+ ***** Java Package ****
+1. Package là gì ? 
+Hiểu đơn giản, package === folder => nơi chứa code 
+- Package được tạo nên bởi tập hợp: class/interface 
+- Package có thể chứa sub-package (cha/con) 
+2. Truy cập package 
+- Các class mà dự định sẽ được sử dụng ngoài package => định danh public (private/default/protected/public) 
+- Các package khác nhau có thể khai báo các class "trùng tên" 
+3. Sử dụng packages 
+Cú pháp:  
+import package_name.class_name; 
+ví dụ: 
+import java.util.Scanner;  
+package: java, sub-package: util , class: Scanner 
+import java.util.* ; 
+=> import tất cả class có trong package java/util
